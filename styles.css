@@ -1,0 +1,88 @@
+*{
+	border: 1px solid black;
+}
+
+body, main{
+	margin: 0;
+}
+header{
+	padding: 20px;
+	min-height: 300px;
+}
+a{
+	text-decoration: none;
+	list-style: none;
+}
+hr{
+	max-width: 1200px;
+	margin: 0px auto 30px auto;
+}
+#logo{
+	width: 100px;
+	margin: 0;
+	position: relative;
+}
+.menu{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+
+}
+ul, li{
+	display: flex;
+	justify-content: space-between;
+	margin: 0 20px 0 20px;
+}
+.reseaux_menu{
+	position: relative;
+	width: 30px;
+	height: 30px
+}
+.div_reseaux_menu{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	width: 300px;
+	margin: 250px 0 0 0;
+}
+.titre{
+	text-align: center;
+	padding: 200px 0 200px;
+	font-size: 3em;
+}
+.repas{
+	max-width: 1000px;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	height: 50px;
+	align-items: center;
+}
+.div_plats, .image_du_plat, .descrition_du_plat, .prix_du_plat{
+	display: flex;
+}
+.div_plats{
+	justify-content: space-between;
+	margin: 30px auto 30px auto;
+	max-width: 1000px;
+	height: auto;
+}
+.image_du_plat #plat{
+	width: 400px;
+}
+.detail_du_plat{
+	padding: 20px;
+	width: 300px;
+	overflow-wrap: break-word;
+}
+.descrition_du_plat{
+	
+}
+.prix_du_plat{
+	align-items: flex-end;
+	padding: 10px 10px 0 10px;
+}
+.prix{
+	padding: 2px 10px 2px 10px;
+}

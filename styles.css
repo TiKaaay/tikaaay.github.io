@@ -17,6 +17,14 @@ hr{
 	max-width: 1200px;
 	margin: 0px auto 30px auto;
 }
+#revenir_debut{
+	color: black;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-top: 30px;
+	padding: 10px;
+}
 #logo{
 	width: 100px;
 	margin: 0;
@@ -85,4 +93,104 @@ ul, li{
 }
 .prix{
 	padding: 2px 10px 2px 10px;
+}
+.information{
+	max-width: 1200px ;
+	margin: auto;
+}
+.div_information{
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	max-height: 600px;
+	padding: 20px 40px 20px 40px;
+}
+.div_plan{
+
+}
+.image_plan{
+	width: 600px;
+}
+.div_reseaux_information{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-evenly;
+}
+.reseaux_info{
+	position: relative;
+	width: 30px;
+	height: 30px
+}
+.info{
+
+}
+.evenement{
+	width: 1200px;
+	margin: auto;
+}
+.image_evenement{
+	width: 550px;
+}
+.evenement_1_et_3{
+	display: flex;
+}
+.evenement_2{
+	display: flex;
+}
+.reseaux_sociaux{
+	display: flex;
+	justify-content: flex-start;
+	max-width: 1200px;
+	margin: auto;
+	overflow: auto;
+}
+.div_reseaux_reseaux{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	max-width: 1200px;
+	margin: auto;
+	margin-bottom: 30px;
+}
+.reseaux_reseaux{
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+#image_insta{
+	width: 500px;
+}
+#contacter{
+	color: black;
+	border-radius: 20px;
+	padding: 10px;
+}
+footer{
+	margin-top: 30px;
+}
+.footer{
+	width: 1200px;
+	margin: auto;
+	display: flex;
+	padding: 20px;
+}
+.block_footer{
+	padding: 20px;
+}
+fieldset{
+	margin:  20px auto 50px auto;
+	max-width: 1200px;
+	min-width: 800px;
+}
+label, input, textarea, select{
+margin: 20px;
+padding: 5px;
+}
+.message{
+	display: flex;
+	align-items: center;
+}
+#formulaire{
+	text-align: center;
+	padding: 5px 10px 5px 10px;
 }

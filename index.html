@@ -4,12 +4,20 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles.css">
+	 <link rel="stylesheet" media="screen and (max-width: 480px)" href="petite_resolution.css">
 	<title>Projet Restaurant</title>
 </head>
 <body>
-	<header>
+	<header> <!--GROSSE DIV MENU-->
+
+		<video id="background_video" autoplay loop muted>
+
+		<source src="videos/restaurant.mp4" type="video/mp4">
+
+		</video>
+
 		<div class="menu" id="menu">
-			<a href="index.html" title="Retour a la page" class="logo"><img id="logo" src="images/logo.webp"></a>
+			<a href="index.html" class="logo" title="Notre Restaurant"><img id="logo" src="images/logo.webp"></a>
 		<nav>
 			<ul>
 				<li><a href="#information" title="Informations" class="lien_menu">Informations</a></li>
@@ -19,25 +27,39 @@
 			</ul>
 		</nav>
 		</div>
+
+		<!--DIV DES LIENS DE RESEAUX SOCIAUX UTILISE 3 FOIS DANS LE SITE-->
+
 		<div class="div_reseaux_menu">
+			<div class="div_background_reseaux">
 		<a href="https://www.instagram.com/?hl=fr" class="reseaux_menu" ><img class="reseaux_menu" src="images/instagram.png" title="Instagram"></a>
 		<a href="https://fr-fr.facebook.com/" class="reseaux_menu" ><img class="reseaux_menu" src="images/facebook.png" title="Facebook"></a>
 		<a href="https://twitter.com/?lang=fr" class="reseaux_menu" ><img class="reseaux_menu" src="images/twitter.png" title="Twitter"></a>
 		<a href="https://www.pinterest.fr/" class="reseaux_menu" ><img class="reseaux_menu" src="images/pinterest.png" title="Pinterest"></a>
 		</div>
+		</div>
 	</header>
 	<main>
+
+		<!--TOUS LES TITRES H1 ON DES GROS MARGINS-->
+
 		<h1 class="titre" id="repas">
 			Menus
 		</h1>
+
+		<!--LE MENU DES REPAS-->
+
 		<div class="repas">
-			<a href="menu des menu" class="menu_des_menu" >Complets</a>
-			<a href="menu des menu" class="menu_des_menu" >Végétariens</a>
-			<a href="menu des menu" class="menu_des_menu" >Boissons</a>
-			<a href="menu des menu" class="menu_des_menu" >Désserts</a>
-			<a href="menu des menu" class="menu_des_menu" >Promotions</a>
+			<a href="menu des menu" class="menu_des_menu" title="Menus Complet">Complets</a>
+			<a href="menu des menu" class="menu_des_menu" title="Menus Végétariens">Végétariens</a>
+			<a href="menu des menu" class="menu_des_menu" title="Nos Boissons">Boissons</a>
+			<a href="menu des menu" class="menu_des_menu" title="Nos Désserts">Désserts</a>
+			<a href="menu des menu" class="menu_des_menu" title="Les Promotions">Promotions</a>
 		</div>
-			<hr>
+			<hr id="hr_repas">
+
+			<!--LA SECTION DE TOUS LES PLATS-->
+
 	<section class="plat">
 
 		<!--PLAT 1-->
@@ -45,32 +67,31 @@
 		<div class="div_plats">
 
 		<div class="image_du_plat">
-			<img src="images/plat1.webp" id="plat">
+			<img src="images/plat1.webp" id="plat" title="Ravioles">
 		</div>
 		<div class="detail_du_plat">
-			<h2>Nom du plat</h2>
-			<p class="description_du_plat">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-				aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<h2>Raviole</h2>
+			<p class="description_du_plat">Farcis aux légumes, au fromage, au poisson ou à la viande, c'est selon votre humeur. N'oubliez pas la sauce qui sublimera votre plat. </p>
 		</div>
 		<div class="prix_du_plat">
-			<p class="prix">Prix</p>
+			<p class="prix">9,99$</p>
 		</div>
 		</div>
 
 		<!--PLAT 2-->
 
-		<div class="div_plats">
+		<div class="div_plats_2">
 
 		<div class="image_du_plat">
-			<img src="images/plat1.webp" id="plat">
+			<img src="images/hamburger.jpg" id="plat" title="Hamburger">
 		</div>
 		<div class="detail_du_plat">
-			<h2>Nom du plat</h2>
-			<p class="description_du_plat">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-				aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<h2>Hamburger</h2>
+			<p class="description_du_plat">Pain fait maison, steak, bacon, cheddar, oignon, salade fraiche du jardin
+			avec frite et sa petite sauce fromagère</p>
 		</div>
 		<div class="prix_du_plat">
-			<p class="prix">Prix</p>
+			<p class="prix">10,99$</p>
 		</div>
 		</div>
 
@@ -79,121 +100,171 @@
 		<div class="div_plats">
 
 		<div class="image_du_plat">
-			<img src="images/plat1.webp" id="plat">
+			<img src="images/lasagne.jpg" id="plat" title="Lasagne">
 		</div>
 		<div class="detail_du_plat">
-			<h2>Nom du plat</h2>
-			<p class="description_du_plat">aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
-				aaaaaaaaaaaaaaaaaaaaaaaaaaaaa</p>
+			<h2>Lasagne</h2>
+			<p class="description_du_plat">Pate a lasagne fait maison, bechamel fait maison avec le lait de notre soigneuse vache a lait,
+			sauce tomate avec nos tomate bio, viande de la même vache a lait qui a été tuer sinon vous ne pourriez pas manger de bonne lasagne :D</p>
 		</div>
 		<div class="prix_du_plat">
-			<p class="prix">Prix</p>
+			<p class="prix">8,99$</p>
 		</div>
 		</div>
 
 	</section>
-	<a href="#menu" id="revenir_debut">Revenir au début</a>
 
-		<!--INFORMATIONS-->
+	<a href="#menu" id="revenir_debut" title="Revenir en Haut">Revenir au début</a>
+
+		<!--TITRE DES INFORMATIONS-->
 
 		<h1 class="titre" id="information">
 			Informations
 		</h1>
+
+		<!--SECTION INFORMATIONS-->
+
 		<section class="information" >
 			<div class="div_information">
 				<div class="div_plan">
-					<h2>Plan</h2>
-					<figure>
-						<a   class="image_plan" href="https://www.google.fr/maps/place/L'Odyss%C3%A9e/@48.2970527,4.0721019,17z/data=!3m1!4b1!4m5!3m4!1s0x47ee98f7f9ecec63:0xb4cd6253b7d2ea7!8m2!3d48.2970492!4d4.0742959">
-						<img src="images/plan.png" class="image_plan"></a>
+					<h2 id="titre_plan">Plan</h2><br>
+					<figure id="figure_plan">
+						<a  id="lien_image_plan" href="https://www.google.fr/maps/place/L'Odyss%C3%A9e/@48.2970527,4.0721019,17z/data=!3m1!4b1!4m5!3m4!1s0x47ee98f7f9ecec63:0xb4cd6253b7d2ea7!8m2!3d48.2970492!4d4.0742959">
+						<img src="images/plan.png" class="image_plan" title="Adresse Google Map"></a>
 					</figure>
-
 				</div>
 				<div class="information_pratique">
-					<h2>Informations Pratiques</h2>
+					<h2 id="titre_info_pratique">Informations Pratiques</h2>
 						<br><br>
 					<h3 class="info">Numéros</h3>
-						<p>06.06.06.06.06</p>
+						<p class="para_info">06.06.06.06.06</p>
 						<hr>
 					<h3 class="info">Livraisons</h3>
-						<p>Du Lundi au Dimanche<br>
+						<p class="para_info">Du Lundi au Dimanche<br>
 						a moin de 4km</p>
 						<hr>
+
+						<!--DEUXIEME PRESENCE DES LIENS DES RESEAUX SOCIAUX-->
+
 					<h3 class="info">Réseaux Sociaux</h3>
 				<div class="div_reseaux_information">
-					<a href="https://www.instagram.com/?hl=fr" class="reseaux_info" ><img class="reseaux_info" src="images/instagram.png" title="Instagram"></a>
-					<a href="https://fr-fr.facebook.com/" class="reseaux_info" ><img class="reseaux_info" src="images/facebook.png" title="Facebook"></a>
-					<a href="https://twitter.com/?lang=fr" class="reseaux_info" ><img class="reseaux_info" src="images/twitter.png" title="Twitter"></a>
-					<a href="https://www.pinterest.fr/" class="reseaux_info" ><img class="reseaux_info" src="images/pinterest.png" title="Pinterest"></a>
+					<a href="https://www.instagram.com/?hl=fr" class="reseaux_info"><img class="reseaux_info" src="images/instagram.png" title="Instagram"></a>
+					<a href="https://fr-fr.facebook.com/" class="reseaux_info"><img class="reseaux_info" src="images/facebook.png" title="Facebook"></a>
+					<a href="https://twitter.com/?lang=fr" class="reseaux_info"><img class="reseaux_info" src="images/twitter.png" title="Twitter"></a>
+					<a href="https://www.pinterest.fr/" class="reseaux_info"><img class="reseaux_info" src="images/pinterest.png" title="Pinterest"></a>
 				</div>
 				</div>
 			</div>
 		</section>	
+
 		<a href="#menu" id="revenir_debut">Revenir au début</a>
+
+		<!--TITRE EVENEMENT-->
+
 		<h1 class="titre" id="evenement">
 			Évenements
 		</h1>
-		<section>
-			<div class="evenement">
-				<div class="evenement_1_et_3">
-					<figure><a href=""><img class="image_evenement" src="images/evenement_1.jpg"></a></figure>
-					<p>loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère je ne m'en soucie loin de moi ces folies mais je m'échine depuis octobre et pourquoi donc depuis début octobre même et qui </p>
+
+		<!--SECTION DES EVENEMENTS-->
+
+		<section class="evenement">
+			<div class="div_evenement">
+				<div class="evenement_1">					
+					<figure class="figure_evenement">
+						<a href="">
+							<img class="image_evenement" src="images/evenement_1.jpg" title="DJ Kahled">
+						</a>
+					</figure>
+					<div class="texte_evenement">
+					<h3>Jeudi !</h3>
+					<p class="para_evenement">Bar OPEN BAR quel jeu de mot, vous allez pouvoir danser avec DJ Kahled, present jeudi pour vous ambiancer ! :D</p>
+					</div>
 				</div>
 				<div class="evenement_2">
-					<p> loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère je ne m'en soucie loin de moi ces folies mais je m'échine depuis octobre et pourquoi donc depuis début octobre même et qui </p>
-					<figure><a href=""><img class="image_evenement" src="images/evenement_2.jpeg"></a></figure>
+					<div class="texte_evenement">
+						<h3>Vendredi !</h3>
+					<p class="para_evenement_2">Mise en place d'un buffet a volonté, le prix de départ est de 11,99$ manger comme vous voulez mais vous gaver pas on ne veux pas faire faillite ! :D</p>
+					</div>
+					<figure class="figure_evenement">
+						<a href="">
+							<img class="image_evenement" src="images/evenement_2.jpeg" title="Buffet A Volonté">
+						</a>
+					</figure>
 				</div>
-				<div class="evenement_1_et_3">
-					<figure><a href=""><img class="image_evenement" src="images/evenement_3.jpeg"></a></figure>
-					<p>loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère je ne m'en soucie loin de moi ces folies mais je m'échine depuis octobre et pourquoi donc depuis début octobre même et qui </p>
+				<div class="evenement_3">
+					<figure class="figure_evenement">
+						<a href="">
+							<img class="image_evenement" src="images/evenement_3.jpeg" title="Coin Défonce">
+						</a>
+					</figure>
+				<div class="texte_evenement">
+						<h3>Samedi !</h3>
+						<p class="para_evenement">Mise en place d'un coin défonce, vous pouvez vous déchirer la gueule, avec alcool, drogues on s'en fou c'est SAMEDI ! :D</p>
 				</div>
 			</div>
+			</div>
 		</section>
+
 		<a href="#menu" id="revenir_debut">Revenir au début</a>
+
+		<!--TITRE DES RESEAUX SOCIAUX-->
 
 		<h1 class="titre" id="reseaux">
 			Réseaux Sociaux
 		</h1>
+
+		<!-- TROISIEME PRESENCE DES LIENS DES RESEAUX SOCIAUX-->
+
 			<div class="div_reseaux_reseaux">
-					<a href="https://www.instagram.com/?hl=fr" class="reseaux_reseaux" ><img class="reseaux_info" src="images/instagram.png" title="Instagram"></a>
+					<a href="https://www.instagram.com/?hl=fr" class="reseaux_reseaux" ><img class="reseaux_reseaux" src="images/instagram.png" title="Instagram"></a>
 					<a href="https://fr-fr.facebook.com/" class="reseaux_reseaux" ><img class="reseaux_reseaux" src="images/facebook.png" title="Facebook"></a>
 					<a href="https://twitter.com/?lang=fr" class="reseaux_reseaux" ><img class="reseaux_reseaux" src="images/twitter.png" title="Twitter"></a>
 					<a href="https://www.pinterest.fr/" class="reseaux_reseaux" ><img class="reseaux_reseaux" src="images/pinterest.png" title="Pinterest"></a>
 				</div>
-				<section class="reseaux_sociaux">
+
+		<section class="reseaux_sociaux">
+
 			<div class="div_reseaux">
-				<figure><a href="https://www.instagram.com/?hl=fr"><img src="images/instagram_plat.jpeg" id="image_insta"></a></figure>
-				<p>Meilleur plat de la ville 5 étoiles</p>
+				<figure><a href="https://www.instagram.com/?hl=fr"><img src="images/avis.jpg" id="image_insta" title="Avis Lasagne"></a></figure>
+				<p class="avis">Meilleur plat de la ville 5 étoiles</p>
 			</div>
 			<div class="div_reseaux">
-				<figure><a href="https://www.instagram.com/?hl=fr"><img src="images/instagram_plat.jpeg" id="image_insta"></a></figure>
-				<p>Encore un plat d'exception 4,5 étoiles</p>
+				<figure><a href="https://www.instagram.com/?hl=fr"><img src="images/avis_2.jpg" id="image_insta" title="Avis Plat Végétariens"></a></figure>
+				<p class="avis">Encore un plat d'exception 4,5 étoiles</p>
 			</div>
 			<div class="div_reseaux">
-				<figure><a href="https://www.instagram.com/?hl=fr"><img src="images/instagram_plat.jpeg" id="image_insta"></a></figure>
-				<p>Encore un plat d'exception 4,5 étoiles</p>
+				<figure><a href="https://www.instagram.com/?hl=fr"><img src="images/avis_3.jpg" id="image_insta" title="Avis Salade"></a></figure>
+				<p class="avis">Très Bon 4 étoiles</p>
 			</div>
 		</section>
+
 		<a href="#menu" id="revenir_debut">Revenir au début</a>
 
-		<h1 class="titre">
-			<a href="contact.html" id="contacter">Nous Contacter</a>
+		<!--BOUTON DE CONTACT-->
+
+		<h1 class="titre" id="bouton_contact">
+			<a href="contact.html" id="contacter" title="Nous Contacter">Nous Contacter</a>
 		</h1>
+
 		<a href="#menu" id="revenir_debut">Revenir au début</a>
+
 	</main>
+
+	<!--LE FOOTER-->
+
 	<footer>
 		<div class="footer">
 			<div class="block_footer">
-				<p>loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère</p>
+				<p class="para_footer">loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère</p>
 			</div>
 			<div class="block_footer">
-				<p>loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère</p>
+				<p class="para_footer">loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère</p>
 			</div>
 			<div class="block_footer">
-				<p>loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère</p>
+				<p class="para_footer">loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère</p>
 			</div>
 			<div class="block_footer">
-				<p>loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère</p>
+				<p class="para_footer">loin de moi l'idée de graver dans le marbre de tailler dans une écorce d'arbre loin de moi l'idée de suggérer que je m'en moque que je n'en ai rien à faire que guère</p>
 			</div>
 		</div>
 	</footer>

@@ -1,63 +1,157 @@
+/*
 *{
 	border: 1px solid black;
 }
+*/
 
 body, main{
 	margin: 0;
+	max-width: 100%;
+	background-color: #e8e8e8;
+	font-weight: bold;
+	font-family: Arial;
 }
-header{
-	padding: 20px;
-	min-height: 300px;
+/*section{
+	border: 1px solid black;
+	border-radius: 20px;
+}*/
+p{
+	font-weight: initial;
+}
+h2, h3{
+	text-align: center;
 }
 a{
 	text-decoration: none;
 	list-style: none;
+	color: white;
+}
+a:hover{
+	color: #a3832f;
 }
 hr{
 	max-width: 1200px;
 	margin: 0px auto 30px auto;
+	border: none;
+	height: 1px ;
+	background-color: #996f00;
 }
+
+/* REVENIR AU DÉBUT */
+
 #revenir_debut{
 	color: black;
 	text-align: center;
 	display: flex;
 	justify-content: center;
-	margin-top: 30px;
+	margin: 20px;
 	padding: 10px;
+	box-shadow:1px 1px 1px 0 rgba(0,0,0,0.2);
+	border-radius: 20px;
+	background-color: #d3d3d3;
+	transition: all 0.1s;
 }
-#logo{
-	width: 100px;
-	margin: 0;
+#revenir_debut:hover{
+	color: white;
+	box-shadow:1px 1px 2px 0 rgba(0,0,0,0.5);
+}
+
+	/* HEADER */
+
+header{
 	position: relative;
+	z-index: 1;
+	padding: 20px;
+	min-height: 300px;
+	max-height: 400px;
+	max-width: 100%;
+}
+#background_video, source{
+	width: 100%;
+	min-height: 300px;
+	max-height: 440px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	object-fit: cover;
+	background-size: cover;
+	z-index: -1;
 }
 .menu{
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
 	align-items: center;
-
+}
+#logo{
+	width: 100px;
+	margin: 0 0 0 20px;
+	position: relative;
+	border-radius: 20px;
+	box-shadow:1px 1px 2px 0 rgba(0,0,0,0.5);
 }
 ul, li{
 	display: flex;
 	justify-content: space-between;
 	margin: 0 20px 0 20px;
+	color: black;
 }
-.reseaux_menu{
-	position: relative;
-	width: 30px;
-	height: 30px
+li{
+	border: 1px solid #e8e8e8;
+	border-radius: 20px;
+	padding: 5px 10px 5px 10px;
+	background-color: #e8e8e8;
+	color: black;
+	box-shadow:1px 1px 2px 0 rgba(0,0,0,0.3);
+}
+.lien_menu{
+	color: black;
 }
 .div_reseaux_menu{
 	display: flex;
 	align-items: flex-end;
+	max-width: 300px;
+	margin: 250px auto 0 0;
+}
+.div_background_reseaux{
+	display: flex;
 	justify-content: space-evenly;
 	width: 300px;
-	margin: 250px 0 0 0;
+	border: 1px solid #e8e8e8;
+	padding: 5px 10px 5px 10px;
+	border-radius: 20px;
+	background-color: #e8e8e8;
+	margin-left: 20px;
+	box-shadow:1px 1px 2px 0 rgba(0,0,0,0.5);
 }
+.reseaux_menu{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	transition: all 0.1s;
+}
+.reseaux_menu:hover{
+	background-color: #a3832f;
+	border-radius: 6px;
+	box-shadow:1px 1px 6px 0 rgba(0,0,0,0.2);
+}
+
+/* LES TITRES */
+
 .titre{
+	position: relative;
 	text-align: center;
 	padding: 200px 0 200px;
 	font-size: 3em;
+	width: 100%;
+	z-index: 2;
+	background-color: white;
+	margin: 0;
+}
+/* MENU DES REPAS */
+.menu_des_menu{
+	color: black;
 }
 .repas{
 	max-width: 1000px;
@@ -67,75 +161,226 @@ ul, li{
 	height: 50px;
 	align-items: center;
 }
-.div_plats, .image_du_plat, .descrition_du_plat, .prix_du_plat{
+#hr_repas{
+	background-color: #a3832f;
+	height: 3px;
+}
+
+/* LA SECTION DES REPAS */
+.plat{
+	margin: 20px auto 20px auto;
+	max-width: 1000px;
+}
+
+.div_plats, .div_plats_2,.image_du_plat, .descrition_du_plat, .prix_du_plat{
 	display: flex;
 }
 .div_plats{
 	justify-content: space-between;
-	margin: 30px auto 30px auto;
-	max-width: 1000px;
+	background-color: #e8dca0;
+	box-shadow:1px 1px 20px 0 rgba(0,0,0,0.1);
 	height: auto;
+	border-radius: 20px;
 }
-.image_du_plat #plat{
+#plat{
 	width: 400px;
+	margin: 30px;
+	box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+	border-radius: 20px;
+}
+.image_du_plat{
+	width: auto;
+}
+.descrition_du_plat{
+	width: 100px
 }
 .detail_du_plat{
 	padding: 20px;
 	width: 300px;
+	background-color: #f7f0d9;
 	overflow-wrap: break-word;
-}
-.descrition_du_plat{
-	
+	border-radius: 10px;
+	margin: 30px 0 30px 0;
+	box-shadow:5px 5px 10px 0 rgba(0,0,0,0.3);
 }
 .prix_du_plat{
 	align-items: flex-end;
 	padding: 10px 10px 0 10px;
+	margin: 20px;
+
 }
 .prix{
-	padding: 2px 10px 2px 10px;
+	padding: 5px 20px 5px 20px;
+	background-color: #f7f0d9;
+	border-radius: 5px;
+	box-shadow:2px 3px 10px 0 rgba(0,0,0,0.4);
+	font-weight: bold;
+}
+
+/* PLAT 2 */
+.div_plats_2{
+	justify-content: space-between;
+	height: auto;
+	background-color: #e8dca0;
+	border-radius: 20px;
+	box-shadow:1px 1px 20px 0 rgba(0,0,0,0.1);
+	margin: 30px 0 30px 0;
+}
+
+/* SECTION DES INFORMATIONS */
+
+#titre_plan{
+	text-align: center;
+	margin: 0;
 }
 .information{
-	max-width: 1200px ;
-	margin: auto;
+	max-width: 1000px ;
+	margin: 20px auto;
+	background-color: #f5e8bf;
+	border-radius: 20px;
+	box-shadow:1px 1px 20px 0 rgba(0,0,0,0.1);
 }
 .div_information{
+	margin: 0;
 	display: flex;
 	justify-content: space-between;
 	max-width: 1200px;
 	max-height: 600px;
-	padding: 20px 40px 20px 40px;
+	padding: 30px;
+}
+#lien_image_plan{
 }
 .div_plan{
-
+	margin: auto;
 }
 .image_plan{
-	width: 600px;
+	max-width: 500px;
+	border-radius: 20px;
+	box-shadow:2px 2px 15px 0 rgba(0,0,0,0.2);
+	transition: all 0.1s;
+}
+.image_plan:hover{
+	box-shadow:2px 3px 15px 0 rgba(0,0,0,0.6);
+}
+.para_info{
+	text-align: center;
 }
 .div_reseaux_information{
 	display: flex;
 	align-items: flex-end;
-	justify-content: space-evenly;
+	justify-content: space-between;
+	
 }
 .reseaux_info{
 	position: relative;
 	width: 30px;
-	height: 30px
+	height: 30px;
+	transition: all 0.1s;
+	transition: all 0.1s;
 }
-.info{
+.reseaux_info:hover{
+	background-color: #a3832f;
+	border-radius: 6px;
+	box-shadow:1px 1px 6px 0 rgba(0,0,0,0.2);
 
 }
-.evenement{
-	width: 1200px;
+.information_pratique{
 	margin: auto;
 }
-.image_evenement{
-	width: 550px;
+#titre_info_pratique{
+	margin: 0;
 }
-.evenement_1_et_3{
+#figure_plan{
+	margin: 0;
+}
+
+/* SECTION DES EVENEMENTS */
+
+.evenement{
+	max-width: 1000px;
+	margin: 20px auto;
+	background-color: #f5e8bf;
+	border-radius: 20px;
+	box-shadow:1px 1px 20px 0 rgba(0,0,0,0.1);
+}
+.div_evenement{
+	padding: 20px;
+}
+.figure_evenement{
+	margin: 0;
+}
+.image_evenement{
+	width: 500px;
+	border-radius: 20px;
+	box-shadow:5px 5px 10px 0 rgba(0,0,0,0.4);
+	transition: all 0.1s;
+	margin: 20px;
+}
+.image_evenement:hover{
+	box-shadow:5px 5px 10px 0 rgba(0,0,0,0.7);
+}
+.evenement_1, .evenement_3{
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+.evenement_1{
+	border-bottom: 1px solid #996f00;
+	border-radius: 20px;
 }
 .evenement_2{
 	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-top: 1px solid #996f00;
+	border-bottom: 1px solid #996f00;
+	border-radius: 20px;
+}
+.evenement_3{
+	border-top: 1px solid #996f00;
+	border-radius: 20px;
+}
+.texte_evenement{
+	background-color: #f7f0d9;
+	border-radius: 20px;
+	box-shadow:1px 3px 10px 0 rgba(0,0,0,0.1);
+	padding: 20px;
+	margin: 20px;
+}
+/*.para_evenement{
+	margin-right: 40px;
+}
+.para_evenement_2{
+	margin-left: 40px;
+}*/
+
+/* SECTION DES RESEAUX SOCIAUX */
+
+.div_reseaux_reseaux{
+	display: flex;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	max-width: 1200px;
+	margin: 20px auto;
+	margin-bottom: 30px;
+	border-radius: 20px;
+	padding: 5px 10px 5px 10px;
+	box-shadow:1px 1px 20px 0 rgba(0,0,0,0.1);
+	background-color: white;
+}
+.div_reseaux{
+	margin: 20px;
+}
+.reseaux_reseaux{
+	position: relative;
+	width: 30px;
+	height: 30px;
+	transition: all 0.1s;
+}
+.reseaux_reseaux:hover{
+	background-color: #a3832f;
+	border-radius: 6px;
+	box-shadow:1px 1px 6px 0 rgba(0,0,0,0.2);
 }
 .reseaux_sociaux{
 	display: flex;
@@ -143,40 +388,66 @@ ul, li{
 	max-width: 1200px;
 	margin: auto;
 	overflow: auto;
-}
-.div_reseaux_reseaux{
-	display: flex;
-	align-items: flex-end;
-	justify-content: space-evenly;
-	max-width: 1200px;
-	margin: auto;
-	margin-bottom: 30px;
-}
-.reseaux_reseaux{
-	position: relative;
-	width: 30px;
-	height: 30px;
+	border-radius: 20px;
+	padding: 5px 10px 5px 10px;
+	box-shadow:1px 1px 20px 0 rgba(0,0,0,0.1);
+	background-color: #f5e8bf;
 }
 #image_insta{
-	width: 500px;
+	width: 450px;
+	border-radius: 20px;
+	box-shadow:1px 1px 20px 0 rgba(0,0,0,0.1);
 }
+.avis{
+	text-align: center;
+	padding: 10px 10px 10px 10px;
+	box-shadow:5px 5px 5px 0 rgba(0,0,0,0.1);
+	border-radius: 20px;
+	background-color: white;
+}
+
+/* BOUTON DE CONTACT */
+
 #contacter{
 	color: black;
+	background-color: #f7f0d9;
+	border: 3px solid #996f00;
+	box-shadow:1px 1px 10px 0 rgba(0,0,0,0.1);
 	border-radius: 20px;
-	padding: 10px;
+	padding: 10px 20px 10px 20px;
+	transition: all 0.1s;
 }
+#contacter:hover{
+	box-shadow:1px 1px 10px 0 rgba(0,0,0,0.3);
+}
+
+/* FOOTER */
+
 footer{
 	margin-top: 30px;
+	width: 100%;
 }
 .footer{
-	width: 1200px;
-	margin: auto;
+	max-width: 1200px;
+	margin: auto auto 30px auto;
 	display: flex;
-	padding: 20px;
+	padding: 0 20px 0 20px;
+	background-color: #f5e8bf;
+	border-radius: 20px;
+	box-shadow:1px 1px 5px 0 rgba(0,0,0,0.1);
 }
 .block_footer{
 	padding: 20px;
 }
+.para_footer{
+	background-color: #f7f0d9;
+	padding: 20px;
+	border-radius: 20px;
+	box-shadow:2px 2px 5px 0 rgba(0,0,0,0.1);
+}
+
+/* CSS POUR LA PAGE DE CONTACT */
+
 fieldset{
 	margin:  20px auto 50px auto;
 	max-width: 1200px;
@@ -193,4 +464,365 @@ padding: 5px;
 #formulaire{
 	text-align: center;
 	padding: 5px 10px 5px 10px;
+	max-width: 100%;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 480px)
+{
+    /*
+*{
+	border: 1px solid black;
+}
+*/
+
+body, main{
+	margin: 0;
+	max-width: auto;
+	background-color: #e8e8e8;
+	font-weight: bold;
+	font-family: Arial;
+}
+section{
+	border: 1px solid black;
+	border-radius: 20px;
+}
+p{
+	font-weight: initial;
+}
+a{
+	text-decoration: none;
+	list-style: none;
+	color: white;
+}
+hr{
+	max-width: auto;
+	margin: 0px auto 30px auto;
+	border: none;
+	height: 1px ;
+	background-color: black;
+}
+
+/* REVENIR AU DÉBUT */
+
+#revenir_debut{
+	color: black;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin-top: 30px;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 20px;
+	background-color: #d3d3d3;
+}
+
+	/* HEADER */
+
+header{
+	position: relative;
+	z-index: 1;
+	padding: 20px;
+	min-height: 300px;
+	max-height: 400px;
+	max-width: 100%;
+}
+#background_video, source{
+	width: 100%;
+	min-height: 300px;
+	max-height: 440px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	object-fit: cover;
+	background-size: cover;
+	z-index: -1;
+}
+.menu{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+#logo{
+	width: 50px;
+	margin: 0 0 0 20px;
+	position: relative;
+}
+ul, li{
+	display: flex;
+	flex-wrap: wrap;	
+	margin: 10px 20px 10px 20px;
+	color: black;
+}
+li{
+	border: 1px solid #e8e8e8;
+	border-radius: 20px;
+	padding: 2px 5px 2px 5px;
+	background-color: #e8e8e8;
+	color: black;
+	font-size: 0.7em;
+}
+.lien_menu{
+	color: black;
+}
+/*.div_reseaux_menu{
+	display: flex;
+	flex-wrap: wrap;
+	
+	max-width: 300px;
+	margin: 250px auto 0 0;
+}
+.div_background_reseaux{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+	width: 300px;
+	border: 1px solid #e8e8e8;
+	padding: 5px 10px 5px 10px;
+	border-radius: 20px;
+	background-color: #e8e8e8;
+	margin-left: 20px;
+}
+.reseaux_menu{
+	position: relative;
+	width: 30px;
+	height: 30px;
+}*/
+
+/* LES TITRES */
+
+.titre{
+	position: relative;
+	text-align: center;
+	padding: 200px 0 200px;
+	font-size: 3em;
+	width: 100%;
+	z-index: 2;
+	background-color: white;
+}
+/* MENU DES REPAS */
+.menu_des_menu{
+	color: black;
+}
+.repas{
+	max-width: 280px;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+	height: 50px;
+	align-items: center;
+}
+
+/* LA SECTION DES REPAS */
+.plat{
+	width: auto;
+}
+
+.div_plats, .image_du_plat, .descrition_du_plat, .prix_du_plat{
+	display: flex;
+	flex-wrap: wrap;
+}
+.div_plats{
+	justify-content: space-between;
+	height: auto;
+}
+#plat{
+	margin: 20px auto 20px auto;
+	width: 250px;
+	box-shadow:8px 8px 10px 0 rgba(0,0,0,0.5);
+}
+.image_du_plat{
+	width: auto;
+}
+.image_du_plat{
+
+}
+.detail_du_plat{
+	padding: 5px;
+	width: 300px;
+	overflow-wrap: break-word;
+	border: 1px solid black;
+	border-radius: 10px;
+	margin: 30px 0 30px 0;
+	box-shadow:5px 5px 10px 0 rgba(0,0,0,0.5);
+}
+.prix_du_plat{
+	align-items: flex-end;
+	padding: 10px 10px 0 10px;
+	margin: 20px;
+
+}
+.prix{
+	padding: 5px 20px 5px 20px;
+	border: 1px solid black;
+	border-radius: 5px;
+	box-shadow:2px 3px 10px 0 rgba(0,0,0,0.5);
+}
+
+/* SECTION DES INFORMATIONS */
+
+#titre_plan{
+	text-align: center;
+	margin-left: -30px;
+}
+.information{
+	max-width: 1200px ;
+	margin: auto;
+}
+.div_information{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 280px;
+	max-height: 1200px;
+	padding: 20px 80px 20px 40px;
+}
+.image_plan{
+	max-width: 250px;
+	margin-left: -20px;
+}
+.div_reseaux_information{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-between;
+	
+}
+.reseaux_info{
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+.information_pratique{
+
+}
+
+/* SECTION DES EVENEMENTS */
+
+.evenement{
+	max-width: auto;
+	margin: auto;
+}
+.div_evenement{
+	padding: 20px;
+}
+.image_evenement{
+	width: 250px;
+}
+.evenement_1_et_3{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+.evenement_2{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	border-top: 1px solid black;
+	border-bottom: 1px solid black;
+}
+.para_evenement{
+	margin-right: 40px;
+}
+.para_evenement_2{
+	margin-left: 40px;
+}
+
+/* SECTION DES RESEAUX SOCIAUX */
+
+.div_reseaux_reseaux{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: flex-end;
+	justify-content: space-evenly;
+	max-width: auto;
+	margin: auto;
+	margin-bottom: 30px;
+}
+.reseaux_reseaux{
+	position: relative;
+	width: 30px;
+	height: 30px;
+}
+.reseaux_sociaux{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	max-width: auto;
+	margin: auto;
+	overflow: auto;
+}
+#image_insta{
+	width: 250px;
+}
+.avis{
+	text-align: center;
+}
+
+/* BOUTON DE CONTACT */
+
+#contacter{
+	color: black;
+	border: 1px solid black;
+	border-radius: 20px;
+	padding: 10px 20px 10px 20px;
+	font-size: 0.7em;
+}
+
+/* FOOTER */
+
+footer{
+	margin-top: 30px;
+	width: 100%;
+}
+.footer{
+	max-width: 1200px;
+	margin: auto auto 30px auto;
+	display: flex;
+	flex-wrap: wrap;
+	padding: 20px;
+	border: 1px solid black;
+	border-radius: 20px;
+}
+.block_footer{
+	padding: 20px;
+}
+
+/* CSS POUR LA PAGE DE CONTACT */
+
+fieldset{
+	margin:  20px auto 50px auto;
+	max-width: auto;
+	min-width: auto;
+}
+label, input, textarea, select{
+margin: 20px;
+padding: 5px;
+}
+.message{
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+}
+#formulaire{
+	text-align: center;
+	padding: 5px 10px 5px 10px;
+	max-width: 100%;
+}
 }

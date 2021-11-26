@@ -4,7 +4,13 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="styles.css">
-	 <link rel="stylesheet" media="screen and (max-width: 480px)" href="petite_resolution.css">
+
+	<link rel="stylesheet" media="screen and (max-width: 480px)" href="petite_resolution.css">
+
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap" rel="stylesheet"> 
+
 	<title>Projet Restaurant</title>
 </head>
 <body>
@@ -12,7 +18,7 @@
 
 		<video id="background_video" autoplay loop muted>
 
-		<source src="videos/restaurant.mp4" type="video/mp4">
+		<source src="videos/restaurant_compresser.mp4" type="video/mp4">
 
 		</video>
 
@@ -70,7 +76,7 @@
 			<img src="images/plat1.webp" id="plat" title="Ravioles">
 		</div>
 		<div class="detail_du_plat">
-			<h2>Raviole</h2>
+			<h2 class="titre_nourriture">Ravioles</h2>
 			<p class="description_du_plat">Farcis aux légumes, au fromage, au poisson ou à la viande, c'est selon votre humeur. N'oubliez pas la sauce qui sublimera votre plat. </p>
 		</div>
 		<div class="prix_du_plat">
@@ -86,7 +92,7 @@
 			<img src="images/hamburger.jpg" id="plat" title="Hamburger">
 		</div>
 		<div class="detail_du_plat">
-			<h2>Hamburger</h2>
+			<h2 class="titre_nourriture">Hamburger</h2>
 			<p class="description_du_plat">Pain fait maison, steak, bacon, cheddar, oignon, salade fraiche du jardin
 			avec frite et sa petite sauce fromagère</p>
 		</div>
@@ -103,7 +109,7 @@
 			<img src="images/lasagne.jpg" id="plat" title="Lasagne">
 		</div>
 		<div class="detail_du_plat">
-			<h2>Lasagne</h2>
+			<h2 class="titre_nourriture">Lasagne</h2>
 			<p class="description_du_plat">Pate a lasagne fait maison, bechamel fait maison avec le lait de notre soigneuse vache a lait,
 			sauce tomate avec nos tomate bio, viande de la même vache a lait qui a été tuer sinon vous ne pourriez pas manger de bonne lasagne :D</p>
 		</div>
@@ -134,15 +140,15 @@
 					</figure>
 				</div>
 				<div class="information_pratique">
+
 					<h2 id="titre_info_pratique">Informations Pratiques</h2>
-						<br><br>
+
+					<div class="vrai_info">
 					<h3 class="info">Numéros</h3>
 						<p class="para_info">06.06.06.06.06</p>
-						<hr>
 					<h3 class="info">Livraisons</h3>
-						<p class="para_info">Du Lundi au Dimanche<br>
+						<p class="para_info">Du Lundi au Dimanche
 						a moin de 4km</p>
-						<hr>
 
 						<!--DEUXIEME PRESENCE DES LIENS DES RESEAUX SOCIAUX-->
 
@@ -152,6 +158,7 @@
 					<a href="https://fr-fr.facebook.com/" class="reseaux_info"><img class="reseaux_info" src="images/facebook.png" title="Facebook"></a>
 					<a href="https://twitter.com/?lang=fr" class="reseaux_info"><img class="reseaux_info" src="images/twitter.png" title="Twitter"></a>
 					<a href="https://www.pinterest.fr/" class="reseaux_info"><img class="reseaux_info" src="images/pinterest.png" title="Pinterest"></a>
+				</div>
 				</div>
 				</div>
 			</div>

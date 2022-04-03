@@ -18,6 +18,9 @@
 
 /* Partie Bureautique et E-sport ---------------------------------------------------------------------------------------- */
 .container-bureautique-et-e-sport{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     max-width: 320px;
     height: 700px;
     border-radius: 20px;
@@ -35,7 +38,7 @@
 
 .container-b-et-e{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     color: white;
@@ -71,10 +74,13 @@ font-weight: 900;
 .etoiles-liste{
     color: #FFD717;
 }
-#liste-b{
+.liste-b-et-e-sport{
     font-size: 20px;
     font-weight: 300;
-
+    list-style-image: url(images/etoile-liste.svg);
+}
+.les-listes{
+    /* list-style: none; */
 }
 #ajouter-tarifs{
     list-style: none;
@@ -126,6 +132,9 @@ font-weight: 900;
 /* Partie Gaming Tarifs ------------------------------------------------------------------------------- */
 
 #part-gaming{  
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 400px;
     height: 750px;
     border-radius: 20px;
@@ -143,12 +152,12 @@ font-weight: 900;
 
 #container-gaming{
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     flex-direction: column;
     color: white;
     height: 100%;
-    padding: 30px;
+    padding: 20px;
 }
 #titre-gaming{
 text-align: center;
@@ -176,6 +185,7 @@ font-weight: 900;
 #liste-gaming{
     font-size: 20px;
     font-weight: 300;
+    list-style-image: url(images/etoile-liste.svg);
 
 }
 #ajouter-tarifs-gaming{

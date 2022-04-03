@@ -13,7 +13,7 @@
     <link rel="stylesheet" href="services.css">
     <link rel="stylesheet" href="tarifs.css">
     <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="mediaqueries.css">
+    <!-- <link rel="stylesheet" href="mediaqueries.css"> -->
     <title>Mopti | Optimisation Windows</title>
 </head>
 
@@ -131,21 +131,26 @@
                 <div id="categories">
 
                     <!-- les images catégories -->
-                    <div class="images-services">
-                        <img src="images/bureautique.svg" alt="" class="images-services" width="110px" height="80px">
-                        <img src="images/gaming.svg" alt="" class="images-services" width="110px" height="80px">
-                        <img src="images/e-sport.svg" alt="" class="images-services" width="55px" height="80px">
+
+                    <div class="les-categories">
+                        <img src="images/bureautique.svg" alt="" class="images-services">
+                        <p class="para-des-services"><span>Bureautique</span> pour les personnes qui veulent un windows rapide pour une utilisation professionnel. Voir plus <span>
+                            <a href="#titre-tarifs" class="ici">ici</a></span></p>
+                    </div>
+
+                    <div class="les-categories">
+                        <img src="images/gaming.svg" alt="" class="images-services">
+                        <p class="para-des-services" id="para-services-2"><span>Gaming</span> pour les joueurs qui veulent un windows performant sans drop de fps qui répond au quart de seconde à leur actions.
+                            Voir plus <span><a href="#titre-tarifs" class="ici">ici</a></span></p>
+                    </div>
+
+                    <div class="les-categories">
+                        <img src="images/e-sport.svg" alt="" class="images-services" id="image-e-sport">
+                        <p class="para-des-services"><span>E-Sport</span> pour les "pro player" ou ceux qui veulent les meilleurs performances possible, une latence presque inexistante.
+                            Voir plus <span><a href="#titre-tarifs" class="ici">ici</a></span></p>
                     </div>
 
                     <!-- les paragraphes catégories -->
-                    <div class="para-des-services"> 
-                        <p class="para-des-services"><span>Bureautique</span> pour les personnes qui veulent un windows rapide pour une utilisation professionnel. Voir plus <span>
-                            <a href="#titre-tarifs" class="ici">ici</a></span></p>
-                        <p class="para-des-services" id="para-services-2"><span>Gaming</span> pour les joueurs qui veulent un windows performant sans drop de fps qui répond au quart de seconde à leur actions.
-                            Voir plus <span><a href="#titre-tarifs" class="ici">ici</a></span></p>
-                            <p class="para-des-services"><span>E-Sport</span> pour les "pro player" ou ceux qui veulent les meilleurs performances possible, une latence presque inexistante.
-                                Voir plus <span><a href="#titre-tarifs" class="ici">ici</a></span></p>
-                    </div>
                 </div>
 
                 <!-- Bouton en savoir plus dans les services -->
@@ -183,15 +188,13 @@
                             <div class="container-apres-titre-tarifs">
                             <div id="etoile-et-liste-b">
 
-<div id="liste-b">
-<pre >
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Respect de la vie priver
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Retirer les Bloatwares
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Réglage graphique
-         Nvidia  et AMD
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Désactivation des services
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Installation des meilleurs
-     pilotes</pre> 
+<div class="liste-b-et-e-sport">
+    <li class="les-listes"> Respect de la vie priver</li>
+    <li class="les-listes"> Respect de la vie priver</li>
+    <li class="les-listes"> Retirer les Bloatwares</li>
+    <li class="les-listes"> Réglage graphique Nvidia  et AMD</li>
+    <li class="les-listes"> Désactivation des services</li>
+    <li class="les-listes"> Installation des meilleurs</li>
 </div>
                             </div>
                             <div id="button-ajouter-esp-tarifs">
@@ -219,18 +222,17 @@
                             <div id="etoile-et-liste-gaming">
 
 <div id="liste-gaming">
-<pre>
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Réduction de la latence
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Augmentation des fps
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Respect de la vie priver
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Retirer les Bloatwares
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Réglage graphique
-         Nvidia  et AMD
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Désactivation des services
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Optimisation de votre connexion
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Réglage du Bios
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Installation des meilleurs pilotes
-    <ion-icon name="star" class="etoiles-liste"></ion-icon> Optimisation de vos launchers</pre> 
+    <li class="les-listes"> Réduction de la latence</li>
+    <li class="les-listes"> Augmentation des fps</li>
+    <li class="les-listes"> Respect de la vie priver</li>
+    <li class="les-listes"> Retirer les Bloatwares</li>
+    <li class="les-listes"> Réglage graphique Nvidia  et AMD</li>
+    <li class="les-listes"> Désactivation des services</li>
+    <li class="les-listes"> Optimisation de votre connexion</li>
+    <li class="les-listes"> Réglage du Bios</li>
+    <li class="les-listes"> Installation des meilleurs</li>
+    <li class="les-listes"> Installation des meilleurs pilotes</li>
+    <li class="les-listes"> Optimisation de vos launchers</li>
 </div>
                             </div>
                             <div id="button-ajouter-esp-tarifs">
@@ -258,13 +260,12 @@
             <div class="container-apres-titre-tarifs">
             <div id="etoile-et-liste-b">
 
-<div id="liste-b">
-<pre >
-<ion-icon name="star" class="etoiles-liste"></ion-icon> Partie "Gaming"
-<ion-icon name="star" class="etoiles-liste"></ion-icon> Reduction Ultra de la 
-latence
-<ion-icon name="star" class="etoiles-liste"></ion-icon> Reglage Ultra du 
-Bios</pre> 
+<div class="liste-b-et-e-sport">
+
+    <li class="les-listes"> Partie "Gaming"</li>
+    <li class="les-listes"> Reduction Ultra de la latence</li>
+    <li class="les-listes"> Reglage Ultra du Bios</li>
+    <li class="les-listes"> Retirer les Bloatwares</li>
 </div>
             </div>
             <div id="button-ajouter-esp-tarifs">

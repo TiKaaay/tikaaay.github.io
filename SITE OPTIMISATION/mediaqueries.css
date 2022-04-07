@@ -1,0 +1,133 @@
+
+@media screen and (max-width: 1500px){
+    #filante{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #lune{
+        /* display: none; */
+        max-width: 1300px;
+    }
+}
+
+@media screen and (max-width: 1230px){
+
+}
+@media screen and (max-width: 1155px) {
+    #lune{
+        display: none;
+    }
+    
+    #nos-services{
+        padding: 0px;
+        text-align: center;
+        margin-bottom: 40px;
+
+    }
+    #titre-tarifs{
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    #tous-les-tarifs{
+        flex-direction: column;
+    }
+    #part-gaming{
+        height: auto;
+        max-width: 320px;
+        width: 90%;
+        margin: 50px 0;
+    }
+    #container-gaming{
+        width: 100%;
+        min-height: 700px;
+        height: auto;
+    }
+    .container-bureautique-et-e-sport, .container-b-et-e{
+        max-width: 320px;
+        width: 90%;
+        min-height: 700px;
+        height: auto;
+
+    }
+   
+}
+
+@media screen and (max-width: 900px) {
+    #les-informations{
+        flex-direction: column;
+        height: 1100px;
+        justify-content: space-around;
+    }
+    #images-gros-titre{
+        background-image:url('images/terre.svg');
+        background-size: 420px;
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    nav{
+        height: 200px;
+    }
+    #container-nav{
+        flex-direction: column;
+        height: 200px;
+        align-items: center;
+    }
+    #connexions{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    #gros-titre{
+        font-size: 11vw;
+    }
+    #phrase-titre{
+        min-width: 270px;
+        max-width: 600px;
+        width: 95%;
+        margin: 20px auto;
+        word-wrap: break-word;
+    }
+
+    .les-categories{
+        flex-direction: column;
+    }
+    #pservices{
+        margin: 0px;
+    }
+    .para-des-services{
+        text-align: center;
+    }
+    #para-services-2{
+        margin:0;
+    }
+    .images-services{
+        margin: 40px 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    /* #return-up{
+        display: none;
+    } */
+    #images-gros-titre{
+        background-image:url('images/terre.svg');
+        background-size: 300px;
+        margin-top: 40px;
+    }
+    #phrase-titre{
+        margin-top: 0;
+    }
+    #nos-services{
+        max-width: 320px;
+        width: 95%;
+        margin: 20px auto;
+    }
+
+}

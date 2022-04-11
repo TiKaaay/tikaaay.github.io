@@ -1,0 +1,70 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+#prix{
+    width: 100%;
+    /* display: flex; */
+    justify-content: center;
+    align-items: center;
+    /* height: 100vh; */
+}
+#container-prix{
+    max-width: 600px;
+    width: 85%;
+    /* height: 80vh; */
+    background-color: white;
+    border-radius: 20px;
+    margin: 20px auto;
+    padding:  20px 20px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    transform: translateY(-5px);
+    box-shadow: 0px 0px 33px -11px rgba(0,0,0,0.75);
+    -webkit-box-shadow: 0px 0px 33px -11px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 33px -11px rgba(0,0,0,0.75);
+   transition: ease-in-out 0.2s;
+}
+
+#titre-prix{
+    font-size: 60px;
+    font-weight: 700;
+    color: #001F3F;
+    text-align: center;
+}
+.images-prix{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+}
+/* .images-prix > img{
+    
+} */
+.container-listes{
+    /* display: flex; */
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    /* left: 5%; */
+}
+.div-listes-prix{
+    border-radius: 20px;
+    padding: 10px ;
+    margin: 0 auto 10px auto;
+}
+.listes-prix{
+    color: #001F3F;
+        font-size: 25px;
+        font-weight: 300;
+        list-style-image: url(../images/etoile-liste.svg);
+}
+/* #smart-button-container{
+
+}
+#paypal-button-container{
+
+} */

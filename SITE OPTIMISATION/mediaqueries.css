@@ -1,0 +1,213 @@
+
+@media screen and (max-width: 1500px){
+    #filante{
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1300px){
+    #lune{
+        /* display: none; */
+        max-width: 1300px;
+    }
+}
+
+@media screen and (max-width: 1230px){
+
+}
+@media screen and (max-width: 1155px) {
+    #lune{
+        display: none;
+    }
+    
+    #nos-services{
+        padding: 0px;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+    #titre-tarifs{
+        padding: 0;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+    #tous-les-tarifs{
+        flex-direction: column;
+    }
+    #part-gaming{
+        height: auto;
+        max-width: 320px;
+        width: 90%;
+        margin: 50px 0;
+    }
+    #container-gaming{
+        width: 100%;
+        min-height: 700px;
+        height: auto;
+    }
+    .container-bureautique-et-e-sport, .container-b-et-e{
+        max-width: 320px;
+        width: 90%;
+        min-height: 700px;
+        height: auto;
+
+    }
+   
+}
+
+@media screen and (max-width: 900px) {
+    #les-informations{
+        flex-direction: column;
+        height: 1100px;
+        justify-content: space-around;
+    }
+    #images-gros-titre{
+        background-image:url('images/terre.svg');
+        background-size: 420px;
+        margin-top: 40px;
+    }
+
+}
+
+@media screen and (max-width: 800px) {
+    /* nav{
+        height: 200px;
+    } */
+    /* #container-nav{
+        flex-direction: column;
+        height: 200px;
+        align-items: center;
+    } */
+    #bouton-lien{
+        display: flex;
+    }
+    #le-menu{
+        display: none;
+    }
+    /* #connexions{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    } */
+    #gros-titre{
+        font-size: 11vw;
+    }
+    #phrase-titre{
+        min-width: 270px;
+        max-width: 600px;
+        width: 95%;
+        margin: 20px auto;
+        word-wrap: break-word;
+    }
+
+    .les-categories{
+        flex-direction: column;
+    }
+    #pservices{
+        margin: 0px;
+    }
+    .para-des-services{
+        text-align: center;
+    }
+    #para-services-2{
+        margin:0;
+    }
+    .images-services{
+        margin: 40px 0;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    /* #return-up{
+        display: none;
+    } */
+    #le-menu{
+        width: auto;
+    }
+    #menu{
+        height: auto;
+        width: auto;
+        
+    }
+    .liens-menu{
+        font-size: 18px;
+    }
+    .span-co{
+        font-size: 18px;
+    }
+    #images-gros-titre{
+        background-image:url('images/terre.svg');
+        background-size: 300px;
+        margin-top: 40px;
+    }
+    #phrase-titre{
+        margin-top: 0;
+        font-size: 20px;
+    }
+    #titre-savoir{
+        font-size: 43px;
+    }
+    #nos-services{
+        max-width: 320px;
+        width: 95%;
+        margin: 20px auto;
+        font-size: 48px;
+    }
+    #nos-offres{
+        font-size: 40px;
+    }
+    #pservices{
+        font-size: 20px;
+    }
+    .para-des-services{
+        font-size: 20px;
+    }
+    #titre-tarifs{
+        font-size: 48px;
+    }
+    h4{
+        font-size: 30px;
+    }
+    .lien-dans-infos{
+        font-size: 18px;
+    }
+
+    /* contact */
+
+    #nous-contacter{
+        font-size: 8vw;
+    }
+    #contact{
+        padding: 10px;
+
+    }
+    /* prix */
+
+    #titre-prix{
+        font-size: 8vw !important;
+    }
+    .images-prix > img{
+        max-width: 80px;
+        width: 100px;
+    }
+    .div-listes-prix{
+        margin: 0 auto!important;
+    }
+    .listes-prix{
+        font-size: 18px !important;
+    }
+}
+
+@media screen and (max-height: 850px) {
+
+    .div-listes-prix{
+        margin: 0 auto!important;
+    }
+    .listes-prix{
+        font-size: 18px !important;
+    }
+    #container-prix{
+        padding: 10px !important;
+    }
+
+}

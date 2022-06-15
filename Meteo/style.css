@@ -6,7 +6,7 @@
 html{
     width: 100vw;
     height: 100vh;
-    /* overflow: hidden; */
+    scroll-behavior: smooth;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
@@ -16,6 +16,8 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    overflow: hidden;
+
 }
 main{
     background-image: url(images/journée.jpg);
@@ -28,12 +30,17 @@ main{
     transition: background-image 1s ease-out;
 
 }
+a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
 .partie-haute{
     display: flex;
     justify-content: center;
-    align-items: center;
     flex-direction: column;
-    padding: 10px;
+    padding: 10px 20px;
+    position: relative;
 }
 h2{
     /* margin: 10px 0; */
@@ -44,89 +51,108 @@ h3{
     font-weight: 200;
     font-size: 20px;
 }
-.temp-et-soleil{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    width: 100%;
-}
 .gros-soleil{
     position: absolute;
-    left: 55%;
-    width: 160px;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 180px;
 }
 h1{
     font-weight: 700;
     font-size: 64px;
 }
 
+/* Container boutons onglets */
+
+.container-btn-onglet{
+    display: flex;
+    padding: 0 20px 10px 20px;
+}
+.onglets{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+}
+.onglets:not(:last-child){
+    margin-right: 10px;
+}
+#le-jour-J{
+    background-color: rgb(255,201,60);
+}
+#les-jours-de-da-semaine{
+    background-color: rgb(162,213,242);
+}
+.display-none{
+    display: none !important;
+}
+.display-block{
+    display: block !important;
+}
+
 .container-parties{
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(2, minmax(150px, 1fr));
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
     grid-template-rows: repeat(1, auto);
     padding: 0 20px;
     width: 100%;
     min-height: 300px;
     height: auto;
-    max-height: 320px;
+    max-height: 60vh;
     margin-bottom: 10px;
+    overflow: auto;
+    visibility: 1;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
     
 }
 .container-listes{
     padding: 10px;
     border-radius: 10px;
+    visibility: 1;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
 }
-/* .container-listes:nth-child(1){
-    background: rgb(162,213,242);
-    background: linear-gradient(180deg, rgba(162,213,242,0.4) 0%, rgba(255,201,60,1) 100%);
-}
-.container-listes:nth-child(2){
-    background: rgb(255,201,60);
-background: linear-gradient(180deg, rgba(255,201,60,1) 0%, rgba(7,104,159,0.45) 100%);
-} */
 .jours-nuit{
     background: rgb(255,201,60);
-    background: linear-gradient(180deg, rgba(255,201,60,1) 0%, rgba(7,104,159,0.45) 100%);
+    background: linear-gradient(180deg, rgba(255,201,60,1) 0%, rgba(7,104,159,0.5) 100%);
 }
 .nuit-jours{
     background: rgb(162,213,242);
-    background: linear-gradient(180deg, rgba(162,213,242,0.4) 0%, rgba(255,201,60,1) 100%);
+    background: linear-gradient(180deg, rgba(162,213,242,0.5) 0%, rgba(255,201,60,1) 100%);
 }
-
-/* .container-parties{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 20px;
-    width: 100%;
-}
-.container-listes{
+.test-container{
+    background: rgb(162,213,242);
     padding: 10px;
     border-radius: 10px;
+    /* visibility: 0;
+    opacity: 0; */
+    display: none;
 }
-.container-listes:nth-child(1){
-    background: rgb(162,213,242);
-    background: linear-gradient(180deg, rgba(162,213,242,0.4) 0%, rgba(255,201,60,1) 100%);
-}
-.container-listes:nth-child(2){
-    background: rgb(255,201,60);
-background: linear-gradient(180deg, rgba(255,201,60,1) 0%, rgba(7,104,159,0.45) 100%);
-} */
 
 .listes{
-    display: flex;
     justify-content: space-between;
     align-items: center;
     min-width: 140px;
     width: 100%;
     position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 30px;
 }
 .listes img{
     width: 50px;
-    position: absolute;
-    left: 35%;
+    transform: translateX(-20%);
+}
+.listes-semaine, .listes-test{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.partie-ressentie, .ressentie{
+    color: rgba(255, 255, 255, 0.8);
 }
 
 /* Le chargement de la page */
@@ -150,11 +176,13 @@ opacity: 0 !important;
     opacity: 1;
     z-index: 10;
     transition: opacity ease-out 0.3s;
+    pointer-events: none;
 }
 .soleil{
 max-width: 320px;
 min-width: 200px;
 width: 100%;
+pointer-events: none;
 }
 .nuit{
 max-width: 300px;
@@ -163,4 +191,5 @@ width: 100%;
 overflow: hidden;
 position: relative;
 top: -20px;
+pointer-events: none;
 }

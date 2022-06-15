@@ -143,7 +143,7 @@ h1{
 }
 .listes-semaine, .listes-test{
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(6,1fr);
 }
 .partie-ressentie, .ressentie{
     color: rgba(255, 255, 255, 0.8);
@@ -186,4 +186,11 @@ overflow: hidden;
 position: relative;
 top: -20px;
 pointer-events: none;
+}
+.partie-ciel-jours{
+    width: 50px;
+    transform: translateX(-20%);
+}
+.partie-min, .jours-temp-min{
+    color: rgba(255, 255, 255, 0.8);
 }

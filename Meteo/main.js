@@ -13,6 +13,7 @@ const UV = document.querySelectorAll(".uv");
 const LesRenssenties = document.querySelectorAll(".ressentie");
 const ImagesTemp = document.querySelectorAll(".images-temp");
 const chargement = document.querySelector(".chargement");
+const IconJours= document.querySelectorAll(".partie-ciel-jours");
 
 if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -87,6 +88,14 @@ function AppelAPI(long, lat) {
                         // console.log(resultatsAPI.hourly[x+1].weather[0].icon);
                     ImagesTemp[x].src = `ressources/icone-temp/${resultatsAPI.hourly[x+1].weather[0].icon}.svg`
                 }
+
+                    for(let x = 0; x < IconJours.length; x++){
+                        // console.log(resultatsAPI.hourly[x+1].weather[0].icon);
+                    IconJours[x].src = `ressources/icone-temp/${resultatsAPI.daily[x+1].weather[0].icon}.svg`
+                    console.log(IconJours);
+                }
+
+
                 // -----------------------------------------------------------
 
             // Affichage UV ------------------------------------------------
@@ -117,7 +126,7 @@ function AppelAPI(long, lat) {
                 let tabJourEnOrdre = jourSemaine.slice(jourSemaine.indexOf(jourActuel)).concat(jourSemaine.slice(0,jourSemaine.indexOf(jourActuel)));
                 // console.log(jourSemaine.slice(jourSemaine.indexOf(jourActuel)));
                 // console.log(jourSemaine.concat(jourSemaine.slice(0,jourSemaine.indexOf(jourActuel))));
-                console.log(tabJourEnOrdre);
+                // console.log(tabJourEnOrdre);
 
             // eventlistener click -----------------------
 
@@ -125,7 +134,7 @@ function AppelAPI(long, lat) {
             const btnJours = document.getElementById("les-jours-de-da-semaine");
             const containerListe = document.querySelectorAll(".container-listes");
             const testContainer = document.querySelector(".test-container");
-            console.log(testContainer);
+            // console.log(testContainer);
 
              btnAjd.addEventListener('click', () => {
                   containerListe1.classList.add("display-block");
@@ -146,7 +155,7 @@ function AppelAPI(long, lat) {
                 const partieJours = document.querySelectorAll(".listes-jours");
                 const partieMin= document.querySelectorAll(".jours-temp-min");
                 const partieMax = document.querySelectorAll(".jours-temp-max");
-                console.log(partieJours, partieMin, partieMax);
+                // console.log(partieJours, partieMin, partieMax);
 
                 for(let k=0; k < tabJourEnOrdre.length; k++ ){
                     partieJours[k].innerText=tabJourEnOrdre[k].slice(0,3);
@@ -158,6 +167,7 @@ function AppelAPI(long, lat) {
                 for(let r = 0; r < partieMax.length; r++) {
                     partieMax[r].innerText = `${Math.trunc(resultatsAPI.daily[r + 1].temp.max)}°C`
                  }
+
 
                 // ------------------------------------------------------------
                 // SI on est le jour alors Afficher ce fond d'écran, et mettre ce fond de catégorie

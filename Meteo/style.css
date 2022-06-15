@@ -4,31 +4,27 @@
     box-sizing: border-box;
 }
 html{
-    width: 100vw;
-    height: 100vh;
+    /* width: 100vw;
+    height: 100vh; */
     scroll-behavior: smooth;
     color: white;
     font-family: 'Poppins', sans-serif;
 }
 body{
     width: 100%;
+    min-height: 100vh;
     height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    background-image: url(images/journée.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    transition: background-image 1s ease-out;
 
 }
 main{
-    background-image: url(images/journée.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 500px;
+    /* max-width: 500px;
     width: 100%;
     max-height: 1000px;
-    height: 100%;
-    transition: background-image 1s ease-out;
-
+    height: 100%; */
 }
 a{
     list-style: none;
@@ -97,13 +93,11 @@ h1{
     grid-gap: 10px;
     grid-template-columns: repeat(1, minmax(150px, 1fr));
     grid-template-rows: repeat(1, auto);
-    padding: 0 20px;
+    padding: 0 20px 30px 20px;
     width: 100%;
     min-height: 300px;
     height: auto;
-    max-height: 60vh;
     margin-bottom: 10px;
-    overflow: auto;
     visibility: 1;
     opacity: 1;
     transition: opacity 0.2s ease-out;

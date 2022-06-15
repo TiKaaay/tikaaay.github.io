@@ -161,7 +161,7 @@ function AppelAPI(long, lat) {
 
                 // ------------------------------------------------------------
                 // SI on est le jour alors Afficher ce fond d'écran, et mettre ce fond de catégorie
-                const fondApp = document.querySelector("main");
+                const fondApp = document.querySelector("body");
                 const containerParties = document.querySelector(".container-parties");
                 const containerListe1 = containerParties.childNodes[1];
                 const containerListe2 = containerParties.childNodes[3];

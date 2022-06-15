@@ -1,0 +1,195 @@
+*, ::after, ::before{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    width: 100vw;
+    height: 100vh;
+    scroll-behavior: smooth;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+}
+body{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+}
+main{
+    background-image: url(images/journée.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 500px;
+    width: 100%;
+    max-height: 1000px;
+    height: 100%;
+    transition: background-image 1s ease-out;
+
+}
+a{
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+.partie-haute{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 10px 20px;
+    position: relative;
+}
+h2{
+    /* margin: 10px 0; */
+    font-weight: 200;
+    font-size: 35px;
+}
+h3{
+    font-weight: 200;
+    font-size: 20px;
+}
+.gros-soleil{
+    position: absolute;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 180px;
+}
+h1{
+    font-weight: 700;
+    font-size: 64px;
+}
+
+/* Container boutons onglets */
+
+.container-btn-onglet{
+    display: flex;
+    padding: 0 20px 10px 20px;
+}
+.onglets{
+    padding: 5px 10px;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+}
+.onglets:not(:last-child){
+    margin-right: 10px;
+}
+#le-jour-J{
+    background-color: rgb(255,201,60);
+}
+#les-jours-de-da-semaine{
+    background-color: rgb(162,213,242);
+}
+.display-none{
+    display: none !important;
+}
+.display-block{
+    display: block !important;
+}
+
+.container-parties{
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
+    grid-template-rows: repeat(1, auto);
+    padding: 0 20px;
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    max-height: 60vh;
+    margin-bottom: 10px;
+    overflow: auto;
+    visibility: 1;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+    
+}
+.container-listes{
+    padding: 10px;
+    border-radius: 10px;
+    visibility: 1;
+    opacity: 1;
+    transition: opacity 0.2s ease-out;
+}
+.jours-nuit{
+    background: rgb(255,201,60);
+    background: linear-gradient(180deg, rgba(255,201,60,1) 0%, rgba(7,104,159,0.5) 100%);
+}
+.nuit-jours{
+    background: rgb(162,213,242);
+    background: linear-gradient(180deg, rgba(162,213,242,0.5) 0%, rgba(255,201,60,1) 100%);
+}
+.test-container{
+    background: rgb(162,213,242);
+    padding: 10px;
+    border-radius: 10px;
+    /* visibility: 0;
+    opacity: 0; */
+    display: none;
+}
+
+.listes{
+    justify-content: space-between;
+    align-items: center;
+    min-width: 140px;
+    width: 100%;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: 30px;
+}
+.listes img{
+    width: 50px;
+    transform: translateX(-20%);
+}
+.listes-semaine, .listes-test{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+.partie-ressentie, .ressentie{
+    color: rgba(255, 255, 255, 0.8);
+}
+
+/* Le chargement de la page */
+.stop-chargement{
+opacity: 0 !important;
+}
+
+.chargement{
+    /* background-image: url(images/journée.jpg);
+    background-repeat: no-repeat;
+    background-size: cover; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    z-index: 10;
+    transition: opacity ease-out 0.3s;
+    pointer-events: none;
+}
+.soleil{
+max-width: 320px;
+min-width: 200px;
+width: 100%;
+pointer-events: none;
+}
+.nuit{
+max-width: 300px;
+min-width: 200px;
+width: 100%;
+overflow: hidden;
+position: relative;
+top: -20px;
+pointer-events: none;
+}

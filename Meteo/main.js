@@ -28,10 +28,19 @@ function AppelAPI(long, lat) {
         .then((data) => {
             console.log(data);
             resultatsAPI = data;
+
+            // Affichage des informations de la Partie Haute de L'écran---
+            
             Info.innerText = resultatsAPI.current.weather[0].description;
             GrosTemp.innerText = `${Math.trunc(resultatsAPI.current.temp)} °`
             localisation.innerText = resultatsAPI.timezone;
             // console.log(LesTemp);
+
+            GrosSoleil.src = `ressources/icone-temp/${resultatsAPI.current.weather[0].icon}.svg`
+
+            // ------------------------------------------------------------
+
+            // Affichage de L'heure de toute les températures--------------
 
             let heureActuelle = new Date().getHours();
             for(let i=0; i<HeureTemp.length; i++){
@@ -45,21 +54,19 @@ function AppelAPI(long, lat) {
                     HeureTemp[i].innerText = `${heureIccr} h`;
                 }
             }
-            
+            // ------------------------------------------------------------
 
-                    // temp pour 3h
+            // Affichage de la température de toute les heures ------------
+
             for(let j = 0; j < LesTemp.length; j++) {
                 LesTemp[j].innerText = `${Math.trunc(resultatsAPI.hourly[j + 1].temp)}°`
             }
 
-
-            GrosSoleil.src = `ressources/icone-temp/${resultatsAPI.current.weather[0].icon}.svg`
-
-               
                     for(let x = 0; x < ImagesTemp.length; x++){
                         console.log(resultatsAPI.hourly[x+1].weather[0].icon);
                     ImagesTemp[x].src = `ressources/icone-temp/${resultatsAPI.hourly[x+1].weather[0].icon}.svg`
                 }
+                // -----------------------------------------------------------
 
         })
     }

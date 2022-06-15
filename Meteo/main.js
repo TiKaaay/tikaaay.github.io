@@ -9,6 +9,7 @@ const Listes = document.querySelectorAll(".listes");
 const HeureTemp = document.querySelectorAll(".heure-temp");
 const LesTemp = document.querySelectorAll(".les-temps");
 const ImagesTemp = document.querySelectorAll(".images-temp");
+const chargement = document.querySelector(".chargement");
 
 if(navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(position => {
@@ -30,7 +31,7 @@ function AppelAPI(long, lat) {
             resultatsAPI = data;
 
             // Affichage des informations de la Partie Haute de L'écran---
-            
+
             Info.innerText = resultatsAPI.current.weather[0].description;
             GrosTemp.innerText = `${Math.trunc(resultatsAPI.current.temp)} °`
             localisation.innerText = resultatsAPI.timezone;
@@ -41,6 +42,7 @@ function AppelAPI(long, lat) {
             // ------------------------------------------------------------
 
             // Affichage de L'heure de toute les températures--------------
+
 
             let heureActuelle = new Date().getHours();
             for(let i=0; i<HeureTemp.length; i++){
@@ -68,5 +70,29 @@ function AppelAPI(long, lat) {
                 }
                 // -----------------------------------------------------------
 
+                // SI on est le jour alors Afficher ce fond d'écran, et mettre ce fond de catégorie
+                const fondApp = document.querySelector("main");
+                const constainerListe = document.querySelector(".container-parties");
+                const containerListe1 = constainerListe.childNodes[1];
+                const containerListe2 = constainerListe.childNodes[3];
+                // console.log(containerListe1);
+                // console.log(containerListe2);
+
+
+                if (heureActuelle >= 6 && heureActuelle <=21) {
+                    fondApp.style.backgroundImage = `url(images/journée.jpg)`;
+                    containerListe1.classList.remove("nuit-jours");
+                    containerListe1.classList.add("jours-nuit");
+                    containerListe2.classList.remove("jours-nuit");
+                    containerListe2.classList.add("nuit-jours");
+                }
+                else{
+                    fondApp.style.backgroundImage = `url(images/soirée.jpg)`;
+                    containerListe1.classList.remove("jours-nuit");
+                    containerListe1.classList.add("nuit-jours");
+                    containerListe2.classList.remove("nuit-jours");
+                    containerListe2.classList.add("jours-nuit");
+                }
+                chargement.classList.add("stop-chargement");
         })
     }

@@ -1,0 +1,12 @@
+@media (min-width: 650px) {
+    body{
+        width: 650px;
+        margin: auto;
+    }
+p{
+    font-size: clamp(16px, 2vw, 20px);
+}
+}
+@media (min-width: 1250px){
+
+}

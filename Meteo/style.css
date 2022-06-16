@@ -81,12 +81,24 @@ h1{
 #les-jours-de-da-semaine{
     background-color: rgb(162,213,242);
 }
-.display-none{
+.opacity0{
+    opacity: 0 !important;
+    pointer-events: none;
+}
+.opacity1{
+    opacity: 1 !important;
+    pointer-events: initial;
+}
+.disable-ajd{
+    /* grid-area: 1 / 1 / 1 / 1; */
+    display: none !important;
+}
+/* .display-none{
     display: none !important;
 }
 .display-block{
     display: block !important;
-}
+} */
 
 .container-parties{
     display: grid;
@@ -98,17 +110,19 @@ h1{
     min-height: 300px;
     height: auto;
     margin-bottom: 10px;
-    visibility: 1;
     opacity: 1;
-    transition: opacity 0.2s ease-out;
+    transition: opacity 0.1s ease-out;
     
 }
 .container-listes{
     padding: 10px;
     border-radius: 10px;
-    visibility: 1;
     opacity: 1;
     transition: opacity 0.2s ease-out;
+
+}
+.container-listes:nth-child(1){
+    grid-area: 1 / 1/ 1/ 1;
 }
 .jours-nuit{
     background: rgb(255,201,60);
@@ -119,12 +133,27 @@ h1{
     background: linear-gradient(180deg, rgba(162,213,242,0.5) 0%, rgba(255,201,60,1) 100%);
 }
 .test-container{
-    background: rgb(162,213,242);
+
+    grid-area: 1 / 1 / 1/ 1;
+    /* display: grid; */
+    grid-gap: 10px;
+    /* grid-template-columns: repeat(1, minmax(150px, 1fr));
+    grid-template-rows: repeat(1, auto); */
+    width: 100%;
+    min-height: 300px;
+    height: auto;
+    margin-bottom: 10px;
+    opacity: 1;
+    transition: opacity 0.1s ease-out;
+}
+.tous-container{
+    grid-area: 1 / 1 / 1/ 1;
     padding: 10px;
     border-radius: 10px;
-    /* visibility: 0;
-    opacity: 0; */
-    display: none;
+    opacity: 0;
+    transition: opacity 0.2s ease-out;
+    background: rgb(162,213,242);
+    transition: opacity 0.1s ease-out;
 }
 
 .listes{
@@ -144,6 +173,13 @@ h1{
 .listes-semaine, .listes-test{
     display: grid;
     grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 30px;
+}
+.listes-semaine img{
+    width: 50px;
+    transform: translateX(-20%);
+    position: relative;
+    top: -42%;
 }
 .partie-ressentie, .ressentie{
     color: rgba(255, 255, 255, 0.8);

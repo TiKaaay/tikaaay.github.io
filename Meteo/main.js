@@ -9,7 +9,9 @@ const Listes = document.querySelectorAll(".listes");
 const HeureTemp = document.querySelectorAll(".heure-temp");
 const LesTemp = document.querySelectorAll(".les-temps");
 const Humidité = document.querySelectorAll(".humidité");
+const HumiditéJours= document.querySelectorAll(".jours-humidité");
 const UV = document.querySelectorAll(".uv");
+const UVJours = document.querySelectorAll(".jours-uv");
 const LesRenssenties = document.querySelectorAll(".ressentie");
 const ImagesTemp = document.querySelectorAll(".images-temp");
 const chargement = document.querySelector(".chargement");
@@ -79,6 +81,9 @@ function AppelAPI(long, lat) {
             for(let h = 0; h < Humidité.length; h++) {
                Humidité[h].innerText = `${Math.trunc(resultatsAPI.hourly[h + 1].humidity)}%`
             }
+            for(let h = 0; h < HumiditéJours.length; h++) {
+                HumiditéJours[h].innerText = `${Math.trunc(resultatsAPI.daily[h + 1].humidity)}%`
+             }
 
             // -----------------------------------------------------------
 
@@ -102,6 +107,9 @@ function AppelAPI(long, lat) {
 
             for(let u = 0; u < UV.length; u++) {
                 UV[u].innerText = `${Math.trunc(resultatsAPI.hourly[u + 1].uvi)}`
+             }
+             for(let u = 0; u < UVJours.length; u++) {
+                UVJours[u].innerText = `${Math.trunc(resultatsAPI.hourly[u + 1].uvi)}`
              }
  
              // -----------------------------------------------------------
@@ -133,21 +141,28 @@ function AppelAPI(long, lat) {
             const btnAjd = document.getElementById("le-jour-J");
             const btnJours = document.getElementById("les-jours-de-da-semaine");
             const containerListe = document.querySelectorAll(".container-listes");
-            const testContainer = document.querySelector(".test-container");
+            const tousContainer = document.querySelector(".tous-container");
             // console.log(testContainer);
 
              btnAjd.addEventListener('click', () => {
-                  containerListe1.classList.add("display-block");
-                  containerListe2.classList.add("display-block");
-                  testContainer.classList.remove("display-block");
+                 if(!containerListe1.classList.contains("opacity1") && !containerListe1.classList.contains("opacity1")){
+                    containerListe1.classList.toggle("opacity1");
+                    containerListe2.classList.toggle("opacity1");
+                    tousContainer.classList.remove("opacity1");
+                    containerListe2.classList.remove("disable-ajd");
+                 }
                 })
               
            btnJours.addEventListener('click', () => {
-            testContainer.classList.add("display-block");
-            containerListe1.classList.remove("display-block");
-            containerListe2.classList.remove("display-block");
-            containerListe1.classList.add("display-none");
-            containerListe2.classList.add("display-none");
+               if(!tousContainer.classList.contains("opacity1")){
+                tousContainer.classList.add("opacity1");
+                containerListe1.classList.remove("opacity1");
+                containerListe2.classList.remove("opacity1");
+                containerListe1.classList.add("opacity0");
+                containerListe2.classList.add("opacity0");
+                containerListe2.classList.add("disable-ajd");
+               }
+
              })
 
 
